@@ -23,7 +23,7 @@ class MarkdownMermaidPlugin(BasePlugin):
 
         if(hasMermaid==1):
             new_tag = soup.new_tag("script")
-            new_tag.string="mermaid.initialize();"
+            new_tag.string="mermaid.initialize({startOnLoad:true});"
             soup.body.append(new_tag)
             
         return unicode(soup)
