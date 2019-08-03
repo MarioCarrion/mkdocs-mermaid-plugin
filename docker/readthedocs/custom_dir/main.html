@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{%- block scripts %}
+  <script>var base_url = '{{ base_url }}';</script>
+  <script src="{{ base_url }}/js/theme.js" defer></script>
+  {%- for path in extra_javascript %}
+    <script src="{{ path }}"></script>
+  {%- endfor %}
+{%- endblock %}
